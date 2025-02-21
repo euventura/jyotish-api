@@ -82,7 +82,7 @@ RUN set -eux; \
 # Configure Nginx
 RUN echo ' \
 server { \
-    listen 9393; \
+    listen 8080; \
     root /var/www/api/public; \
     index index.php index.html index.htm; \
     server_name _; \
