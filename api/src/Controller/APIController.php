@@ -16,6 +16,12 @@ class APIController extends AbstractController
     private $logger;
     private $chart;
 
+    #[Route('/', name: 'index')]
+    public function index(): Response
+    {
+        return new Response("welcome");
+    }
+
     public function __construct(LoggerInterface $logger)
     {
         $this->logger = $logger;

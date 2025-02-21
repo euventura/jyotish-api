@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: jyotish_api
     ports:
-      - "9393:9393"
+      - "80:9393"
     volumes:
       - ./api:/var/www/api
-      - /var/www/api/vendor
+      - /var/www/api/vendor               
