@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jyotish Vedic Astrology API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cosmic-background">
+        <header class="celestial-header">
+            <div class="star-overlay"></div>
+            <nav class="cosmic-nav">
+                <div class="logo">
+                    <span>🌌 Jyotish API</span>
+                </div>
+                <ul>
+                    <li><a href="/api/docs">Documentação</a></li>
+                </ul>
+            </nav>
+            
+            <div class="hero-content">
+                <h1>Open Jyotish API</h1>
+                <p>Gere dados de mapas em JSON</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-secondary">Documentação</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="recursos" class="cosmic-section">
+                <h2>Recursos da API</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">🌟</div>
+                        <h3>Cálculos Planetários</h3>
+                        <p>Posições precisas de planetas e casas astrológicas</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🌙</div>
+                        <h3>Natal Chart</h3>
+                        <p>Geração instantânea de cartas natais</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="cosmic-footer">
+            <div class="footer-content">
+                <p>© 2025 Open Jyotish API - Todos os direitos reservados</p>
+                <div class="social-links">
+                    <a href="https://github.com/euventura/jyotish-api">GitHub</a>
+                    <a href="/api/doc">Documentação</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<style>
+
+:root {
+    /* Paleta Cósmica */
+    --cor-fundo-escuro: #0a0a1a;
+    --cor-texto-primaria: #e6e6fa;
+    --cor-destaque: #4a90e2;
+    --gradiente-estrelas: linear-gradient(
+        135deg, 
+        rgba(10,10,26,1) 0%, 
+        rgba(30,30,60,1) 100%
+    );
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-primaria);
+    line-height: 1.6;
+}
+
+.cosmic-background {
+    background: var(--gradiente-estrelas);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de Estrelas Animadas */
+.star-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(#ffffff 1px, transparent 1px),
+        radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    animation: moveStars 20s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes moveStars {
+    0% {
+        background-position: 0 0, 25px 25px;
+    }
+    100% {
+        background-position: 50px 50px, 75px 75px;
+    }
+}
+
+.celestial-header {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cosmic-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.cosmic-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.cosmic-nav a {
+    color: var(--cor-texto-primaria);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--cor-destaque);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+
+.btn-secondary {
+    border: 2px solid var(--cor-destaque);
+    color: var(--cor-destaque);
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: rgba(30, 30, 60, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.cosmic-footer {
+    background: rgba(10, 10, 26, 0.7);
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .feature-grid {
+        flex-direction: column;
+    }
+
+    .cosmic-nav {
+        flex-direction: column;
+    }
+}
+
+</style>
