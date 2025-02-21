@@ -19,7 +19,7 @@ class APIController extends AbstractController
     #[Route('/', name: 'index')]
     public function index(): Response
     {
-        return new Response("welcome");
+        return new Response(file_get_contents(dirname(dirname(__DIR__)) . '/views/index.html'));
     }
 
     public function __construct(LoggerInterface $logger)
