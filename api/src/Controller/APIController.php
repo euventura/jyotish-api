@@ -16,12 +16,6 @@ class APIController extends AbstractController
     private $logger;
     private $chart;
 
-    #[Route('/', name: 'index')]
-    public function index(): Response
-    {
-        return new Response(file_get_contents(dirname(dirname(__DIR__)) . '/views/index.html'));
-    }
-
     public function __construct(LoggerInterface $logger)
     {
         $this->logger = $logger;
